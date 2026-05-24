@@ -5,6 +5,13 @@ System do monitorowania integralności danych lotniczych standardu ADS-B oraz wy
 ## 📋 O Projekcie
 Projekt został zrealizowany jako część pracy dyplomowej na kierunku **Organizacja i Sterowanie Ruchem Lotniczym**. Głównym celem jest automatyczna identyfikacja niefizycznych parametrów lotu, które mogą sugerować awarię czujników lub celową manipulację danymi (cyberataki).
 
+### 🖥️ Zobrazowanie systemu
+![Normalny ruch](screenshots/radar_normal.png)
+*Rys 1. Monitorowanie poprawnego ruchu lotniczego.*
+
+![Wykrycie spoofingu](screenshots/radar_alert.png)
+*Rys 2. System identyfikujący niefizyczne parametry lotu (kolor czerwony).*
+
 ## 🚀 Funkcjonalności
 - **Wizualizacja Mapowa:** Dynamiczny radar lotów oparty na bibliotece GMap.NET.
 - **Detekcja AI:** Wykorzystanie sieci neuronowej typu **Autoencoder** do analizy błędu rekonstrukcji (MSE).
