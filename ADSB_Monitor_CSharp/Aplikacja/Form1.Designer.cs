@@ -33,6 +33,7 @@
             btnStart = new Button();
             timerRadar = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
+            label1 = new Label();
             pbSpoofing = new ProgressBar();
             lblProb = new Label();
             lblICAO = new Label();
@@ -73,13 +74,16 @@
             // 
             // btnStart
             // 
-            btnStart.Font = new Font("BankGothic Lt BT", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnStart.Location = new Point(35, 254);
+            btnStart.BackColor = Color.FromArgb(30, 30, 30);
+            btnStart.FlatStyle = FlatStyle.Flat;
+            btnStart.Font = new Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnStart.ForeColor = Color.White;
+            btnStart.Location = new Point(35, 279);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(94, 75);
             btnStart.TabIndex = 1;
             btnStart.Text = "START";
-            btnStart.UseVisualStyleBackColor = true;
+            btnStart.UseVisualStyleBackColor = false;
             btnStart.Click += btnStart_Click_1;
             // 
             // timerRadar
@@ -89,6 +93,8 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(30, 30, 30);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(pbSpoofing);
             panel1.Controls.Add(lblProb);
             panel1.Controls.Add(lblICAO);
@@ -101,66 +107,84 @@
             panel1.Size = new Size(298, 652);
             panel1.TabIndex = 2;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Consolas", 12F, FontStyle.Underline, GraphicsUnit.Point, 204);
+            label1.ForeColor = Color.FromArgb(224, 224, 224);
+            label1.Location = new Point(28, 25);
+            label1.Name = "label1";
+            label1.Size = new Size(241, 23);
+            label1.TabIndex = 9;
+            label1.Text = "TACTICAL DATA READOUT";
+            // 
             // pbSpoofing
             // 
             pbSpoofing.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pbSpoofing.Location = new Point(95, 268);
+            pbSpoofing.BackColor = Color.FromArgb(30, 30, 30);
+            pbSpoofing.Location = new Point(28, 327);
             pbSpoofing.Name = "pbSpoofing";
-            pbSpoofing.Size = new Size(125, 44);
+            pbSpoofing.Size = new Size(241, 27);
             pbSpoofing.TabIndex = 6;
             // 
             // lblProb
             // 
             lblProb.AutoSize = true;
-            lblProb.Font = new Font("BankGothic Lt BT", 13.8F);
-            lblProb.Location = new Point(14, 212);
+            lblProb.Font = new Font("Consolas", 12F);
+            lblProb.ForeColor = Color.Lime;
+            lblProb.Location = new Point(14, 271);
             lblProb.Name = "lblProb";
-            lblProb.Size = new Size(93, 24);
+            lblProb.Size = new Size(76, 23);
             lblProb.TabIndex = 8;
             lblProb.Text = "label2";
             // 
             // lblICAO
             // 
             lblICAO.AutoSize = true;
-            lblICAO.Font = new Font("BankGothic Lt BT", 13.8F);
-            lblICAO.Location = new Point(14, 22);
+            lblICAO.Font = new Font("Consolas", 12F);
+            lblICAO.ForeColor = Color.Lime;
+            lblICAO.Location = new Point(14, 81);
             lblICAO.Name = "lblICAO";
-            lblICAO.Size = new Size(93, 24);
+            lblICAO.Size = new Size(76, 23);
             lblICAO.TabIndex = 3;
             lblICAO.Text = "label1";
             // 
             // lblIssue
             // 
             lblIssue.AutoSize = true;
-            lblIssue.Font = new Font("BankGothic Lt BT", 13.8F);
-            lblIssue.Location = new Point(14, 162);
+            lblIssue.Font = new Font("Consolas", 12F);
+            lblIssue.ForeColor = Color.Lime;
+            lblIssue.Location = new Point(14, 221);
             lblIssue.Name = "lblIssue";
-            lblIssue.Size = new Size(93, 24);
+            lblIssue.Size = new Size(76, 23);
             lblIssue.TabIndex = 7;
             lblIssue.Text = "label1";
             // 
             // lblSpeed
             // 
             lblSpeed.AutoSize = true;
-            lblSpeed.Font = new Font("BankGothic Lt BT", 13.8F);
-            lblSpeed.Location = new Point(14, 64);
+            lblSpeed.Font = new Font("Consolas", 12F);
+            lblSpeed.ForeColor = Color.Lime;
+            lblSpeed.Location = new Point(14, 123);
             lblSpeed.Name = "lblSpeed";
-            lblSpeed.Size = new Size(93, 24);
+            lblSpeed.Size = new Size(76, 23);
             lblSpeed.TabIndex = 4;
             lblSpeed.Text = "label2";
             // 
             // lblAlt
             // 
             lblAlt.AutoSize = true;
-            lblAlt.Font = new Font("BankGothic Lt BT", 13.8F);
-            lblAlt.Location = new Point(14, 117);
+            lblAlt.Font = new Font("Consolas", 12F);
+            lblAlt.ForeColor = Color.Lime;
+            lblAlt.Location = new Point(14, 176);
             lblAlt.Name = "lblAlt";
-            lblAlt.Size = new Size(93, 24);
+            lblAlt.Size = new Size(76, 23);
             lblAlt.TabIndex = 5;
             lblAlt.Text = "label3";
             // 
             // panel2
             // 
+            panel2.BackColor = Color.FromArgb(30, 30, 30);
             panel2.Controls.Add(btnStart);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
@@ -172,6 +196,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(30, 30, 30);
             ClientSize = new Size(1078, 652);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -197,5 +222,6 @@
         private Label lblIssue;
         private Label lblProb;
         private Panel panel2;
+        private Label label1;
     }
 }

@@ -55,7 +55,7 @@ namespace Aplikacja
             lblAlt.Text = "ALT: ---";
             lblSpeed.Text = "VEL: ---";
             lblProb.Text = "RISK: 0%";
-            lblIssue.Text = "";
+            lblIssue.Text = "ISSUE: None";
             pbSpoofing.Value = 0;
         }
 
@@ -88,12 +88,17 @@ namespace Aplikacja
                 pbSpoofing.Value = (int)ac.Probability;
 
                 // Zmiana koloru paska w zależności od ryzyka
-                if (ac.Probability > 80) pbSpoofing.ForeColor = Color.Red;
-                else if (ac.Probability > 50) pbSpoofing.ForeColor = Color.Yellow;
+                if (ac.Probability > 50) pbSpoofing.ForeColor = Color.Red;
+                else if (ac.Probability > 25) pbSpoofing.ForeColor = Color.Yellow;
                 else pbSpoofing.ForeColor = Color.Lime;
+
+                pbSpoofing.Style = ProgressBarStyle.Continuous;
+                pbSpoofing.Value = (int)ac.Probability;
+                pbSpoofing.Maximum = 100;
+
             }
 
-            lblICAO.ForeColor = (ac.Probability > 85) ? Color.Red : Color.Black;
+            lblICAO.ForeColor = (ac.Probability > 50) ? Color.Red : Color.Lime;
         }
 
         private void CreateAircrafts()
